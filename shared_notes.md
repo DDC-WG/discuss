@@ -1,5 +1,8 @@
 # DDC WG Shared Notes
 
+[![hackmd-github-sync-badge](https://hackmd.io/kL-J_4eOQj6Q1wS1T2JGZw/badge)](https://hackmd.io/kL-J_4eOQj6Q1wS1T2JGZw)
+
+
 How to use this document:
 - Please give it a quick skim-through to get the hang of the format and function before editing
 - feel free to add pointers, links, open questions, in amongst the others
