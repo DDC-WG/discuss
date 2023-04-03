@@ -1,5 +1,7 @@
 # PLN Data-Compliance WG
 
+[![hackmd-github-sync-badge](https://hackmd.io/zAZmzYc5SZirLWTB-ZsNOw/badge)](https://hackmd.io/zAZmzYc5SZirLWTB-ZsNOw)
+
 ## Basic Info
 
 - Primary mode of communications: #wg-data-compliance on [Filecoin Public Slack]()
