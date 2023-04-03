@@ -5,14 +5,82 @@
 - Primary mode of communications: #wg-data-compliance on [Filecoin Public Slack]()
     - async longform collab?
     - Slack versus Github Discussions?
-- Meeting cadence: monthly meetings for now?
+- Meeting cadence: Every four weeks on Monday for now
 - IPR regime: ?
 - Confidentiality: opt-in for specific work items as needed but maximally transparent by default as per [PLN norms](https://protocol.ai/blog/announcing-the-permissive-license-stack/)
 - Steward/Responsible Idiot: Juan Caballero, aka [bumblefudge](https://github.com/bumblefudge) on Filecoin Public Slack
 
 ## Meeting Notes
 
-### Kickoff - 5 Feb 2023, 8am PST / 5pm CEST
+### 
+
+### 3 Apr 2023, 8am PST 
+
+- Agenda
+    - Chair while Juan is out?
+        - Ian will chair next, Juan will be back after that
+    - Community and Governance Track at IPFS Thing: 
+        - Opening talk (11-12): overview of all layers of IPFS governance, flag issues (will be recorded); unstructured time --> unconference
+        - this group could propose a more specific session?
+        - also happy to signal open topics anyone wants driven-by
+        - Brainstormed a bit into [big questions section](https://hackmd.io/kL-J_4eOQj6Q1wS1T2JGZw?both#Big-Questions)
+        - ![](https://hackmd.io/_uploads/B11RL_OZh.png) - 12-16, minus lunch = unconference slots
+            + DDC session near the end of the slots, maybe?
+    - Also at Thing: COmpact Format and IPIP298
+        - 
+    - Filecoin Fdtn: Do we have a stopgap or for-now solution to GDPR?
+        - Robin: [Euro Cloud CoC](https://eucoc.cloud/en/home) - self-regulation guidelines, might be applicable to Filecoin services?
+        - Ian: Meeting with DPAs and regulators in coming weeks on behalf of Filecoin Foundation?
+        - Ian: Steer away from PII use, cultural archives only
+        - Robin: Non-custodial and disposable privkey narrative (end-user only data controller
+            - caveat - demonstrable/provable deletion of privkey? quality of key mgmt is a factor
+            - Marjorie - forgetting !== deletion (good-faith/reasonable effort to remove all access to data is usually enough BUT PER USE-CASE, not universal precedent)
+        - Ian: Belgium has a lot of questions re: IPFS <> Solid-based citizen wallet/vault
+            - extremely sensitive data/authoritative docs in that use-case...
+            - Hybrid solution - Solid as identity/AuthZ layer, keep keys on that layer, IPFS just as logical storage under...
+            - news flash - [that project is using MSFT azure/entra now](https://www.belganewsagency.eu/government-of-flanders-to-partner-with-microsoft-to-develop-data-vaults), with a tbd Solid integration??
+            - Ian: Univ of Ghent is a powerhouse for Solid work
+        - 
+
+### 6 Mar 2023, 8am PST - Small Group Sync
+
+- In Att: Robin, Juan, Boris, Ian
+- Agenda
+    - Intros
+        - Ian: Filecoin Foundation partner engineer working with grantees; grantees' legal/compliance needs but also needs of PLN/FF
+            - personal interest: legal feasibility of/gameplan for personal data stores
+    - Shared Notes presi and invitation to edit
+    - Thing Roadmap?
+        - Get @lidel and @thibmeu in a room to discuss [IPIP298](https://github.com/ipfs/specs/pull/340) and blocklist ideas?
+            - [ ] Boris will email them and see if they can host a session on this in governance/standards track and/or operators track
+        - Short-term priorities versus Medium-term ones
+            - Boris: Harmonizing on blocklists is most urgent tooling problem for both short-term pain and openinig up medium-term tooling possibilities
+            - Ian: Incremental tooling - 
+    - What tooling is most urgent?
+        - 1 scan on upload (refuse to upload) versus 2 replication-filtering (refuse to serve) versus 3 storage liability, served or not (refuse to store) versus 4 DHT-accomplice risk (helping people find it even if you're not serving or storing)
+            - Ian: We need to _start_ on #3 or else there's no backup if #1 and #2 fail
+        - Filecoin variant:
+            - for length of storage deal, data that's legal for creator and pinner might be downloadable to consumers in places where it isn't legal
+            - data that is illegal to store might not be removable for the duration of the storage deal unless the storage provider is willing to lose FIL.
+            - Boris: hypothesis: estuary might be a place where filtering could happen?
+                - Ian: Estuary can choose not to serve...       
+        - Robin: Is #4 in scope? Is IPNI liable for helping people find bad bits?
+            - Ian: DNS precedent would say *mostly* no... Robin: But with exceptions (see counterterrorism policies in France, for ex.)
+            - Robin: Caching proxies closer precedent to search on
+            - Boris: but what about the rest of a block?
+            - Robin: IANAL, we should get a real lawyer in here/on this
+        - Boris: service provider <> protocol division of labor rears its head again here
+            - Boris: estuary and CID gravity; might this have been part of why infura shut down their ipfs tooling?
+            - Ian: web3s might have a lot of input here; Boris: They're using estuary too, but the architecture has some nuances
+            - Boris: Pinata
+            - Boris: what is kubo's recommendation ? where is ipfs desktop?
+        - PDS issues
+            - BlueSky/AT Protocol/DWN versus Pods/Solid
+                - AT may be good to bring to the table when PDS is on the agenda
+    - Fill out more sections in shared notes as time allows
+        - figuring out the mode for input/shared ownership of the [shared-notes doc](https://hackmd.io/kL-J_4eOQj6Q1wS1T2JGZw?view)
+
+### Kickoff - 5 Feb 2023, 8am PST
 - Agenda
     - QUICK intros [1min per co, 1min per individual]
     - Decide short-term goals and, ideally one deliverable (or more) for Q1/Q2
@@ -23,7 +91,7 @@
         - Fission in a nutshell: we give users a personal file system, so we want to imagine 
     - Marjorie: Head of legal for Fractal.id, based in Porto; Fractal is a KYC/DID provider with web3 use-cases; span custodial and non-custodial/exportable storage of personal data
     - Robin: Work for Protocol Labs, on standards and governance; before that worked on NYT for 5 years on privacy, GDPR and related issues
-    - Addie: Network Goods team; archaelogical association (hypercerts, impact evaluation, other onchain opensource/funding mechanisms); worked on various L1s and FOSS before this
+    - Addie: Network Goods; archelogical association (hypercerts, impact evaluation, other onchain opensource/funding mechanisms); worked on various L1s and FOSS before this
     - Martin (identity.com): Solana onchain DIDs; Filcoin 
         - have worked on many projects that get "shut down by GDPR" - might be easier to solve on network 
     - Daniel (Civic): we build apps on identity.com stuff; we issue VCs to KYC'd users that go in their wallets 
