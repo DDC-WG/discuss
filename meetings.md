@@ -28,8 +28,9 @@
         - Brainstormed a bit into [big questions section](https://hackmd.io/kL-J_4eOQj6Q1wS1T2JGZw?both#Big-Questions)
         - ![](https://hackmd.io/_uploads/B11RL_OZh.png) - 12-16, minus lunch = unconference slots
             + DDC session near the end of the slots, maybe?
-    - Also at Thing: COmpact Format and IPIP298
-        - 
+    - Also at Thing: COmpact Format and [IPIP298](https://github.com/ipfs/specs/pull/340)
+        - See also Hector San Juan's [IPIP383](https://github.com/ipfs/specs/pull/383) and [working prototype](https://github.com/hsanjuan/nopfs) for sideloading into kubo
+        - See also Hector's [Design doc](https://www.notion.so/protocollabs/Content-blocking-on-IPFS-and-Kubo-3721f6fcc8044ba9acebd7356a60c4b7)
     - Filecoin Fdtn: Do we have a stopgap or for-now solution to GDPR?
         - Robin: [Euro Cloud CoC](https://eucoc.cloud/en/home) - self-regulation guidelines, might be applicable to Filecoin services?
         - Ian: Meeting with DPAs and regulators in coming weeks on behalf of Filecoin Foundation?
